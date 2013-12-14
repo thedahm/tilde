@@ -2,6 +2,18 @@
 # other applications that use the Readline library.
 escape ^Jj
 
+term xterm
+termcap xterm* xn:hs@
+# terminfo and termcap for nice 256 color terminal
+# # allow bold colors - necessary for some reason
+attrcolor b ".I" 
+# # tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+# # erase background with current bg color 
+defbce "on"
+
+vbell off
+
 # Bind F11 and F12 (NOT F1 and F2) to previous and next screen window. (F1 and
 # F2 would be "bindkey -k k1 prev" and "bindkey -k -k2 next", for some reason.)
 bindkey -k F1 prev
