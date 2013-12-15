@@ -7,12 +7,12 @@ use this on new computers so I feel more at home.
 
 To install, execute:
 ```Shell
-git clone https://github.com/thedahm/tilde.git && tilde/install.sh`
+git clone https://github.com/thedahm/tilde.git && tilde/install.sh
 ```
 
 To update an existing install, go to Tilde's directory and execute:
 ```Shell
-git pull && ./install.sh`
+git pull && ./install.sh
 ```
 
 ## Thanks
