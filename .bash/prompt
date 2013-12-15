@@ -65,8 +65,8 @@ fi;
 command -v git > /dev/null \
 	&& __prompt_vcs_string=' $(git-show-branch)' \
 	|| __prompt_vcs_string='';
-export PS1="\${__prompt_color}-----[ \\t ]$(__prompt_display_process_tree) (!\\!) [ \$(__prompt_display_error) ] \\u@\\h \\w$__prompt_vcs_string\\e[m\\n\\$ ";
-
+#export PS1="\${__prompt_color}-----[ \\t ]$(__prompt_display_process_tree) (!\\!) [ \$(__prompt_display_error) ] \\u@\\h \\w$__prompt_vcs_string\\e[m\\n\\$ ";
+export PS1="$(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]'; else echo '\[\033[00;32m\]'; fi)$(if [[ ${HOSTNAME} == '_udell' && ${EUID} != 0 ]]; then echo '\[\033[0;30m\]localhost'; else echo '\u@\h'; fi)\[\033[01;33m\] \w\$(ret=\$?;if [[ \$ret != 0 ]]; then echo '\[\033[01;31m\]('\$ret')'; else echo '\[\033[00m\]'; fi)\[\033[00m\] $ " #    ([[ \$? != 0 ]] && echo \"\[\033[01;31m\]:(\[\033[01;34m\] \")\\$\[\033[00m\] "
 # Update the window/tab title for GUI terminals.
 if [ "${TERM#xterm}" != "$TERM" -o "${TERM#screen}" != "$TERM" ]; then
 	# Show the basename of the current working directory in the title.
