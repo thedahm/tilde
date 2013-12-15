@@ -9,6 +9,40 @@
 # command word following the alias is also checked for alias expansion."
 alias sudo='sudo ';
 
+# enable color support of ls and also add handy aliases
+#if [ -x /usr/bin/dircolors ]; then
+#    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+#    alias ls='ls --color=auto'
+#    #alias dir='dir --color=auto'
+#    #alias vdir='vdir --color=auto'
+#
+#    alias grep='grep --color=auto'
+#    alias fgrep='fgrep --color=auto'
+#    alias egrep='egrep --color=auto'
+#fi
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
 # Paths and binaries
 # -----------------------------------------------------------------------------
 # List the directories we want to add to the PATH variable, if they exist.
@@ -52,27 +86,6 @@ done;
 printf -v PATH "%s:" "${new_paths[@]}";
 export PATH="${PATH%:}";
 unset {old,new}_path{,s} path{s,}_to_add;
-
-# Prefer Homebrew's netcat
-[ -x /usr/local/bin/netcat ] && hash -p /usr/local/bin/netcat nc;
-
-# OS X's file system is case-insensitive by default, so use aliases to get
-# "GET"/"HEAD"/… working. (Otherwise "HEAD" would execute "/usr/bin/head".)
-[[ "$OSTYPE" =~ ^darwin ]] && for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-	alias "$method"="/usr/bin/lwp-request -m $method";
-done;
-unset method;
-
-# Confirm before overwriting
-# -----------------------------------------------------------------------------
-# I know it is bad practice to override the default commands, but this is for
-# my own safety. If you really want the original "instakill" versions, you can
-# use "command rm", "\rm", or "/bin/rm" inside your own commands, aliases, or
-# shell functions. Note that separate scripts are not affected by the aliases
-# defined here.
-alias cp='cp -i';
-alias mv='mv -i';
-alias rm='rm -i';
 
 # Editors and pagers
 # -----------------------------------------------------------------------------
@@ -158,16 +171,6 @@ unset file;
 
 # Utilities
 # -----------------------------------------------------------------------------
-# Open the manual page for the last command you executed.
-function lman {
-	set -- $(fc -nl -1);
-	while [ $# -gt 0 -a '(' "sudo" = "$1" -o "-" = "${1:0:1}" ')' ]; do
-		shift;
-	done;
-	cmd="$(basename "$1")";
-	man "$cmd" || help "$cmd";
-}
-
 # Clipboard access. I created these aliases to have the same command on
 # Cygwin, Linux and OS X.
 if command -v pbpaste >/dev/null; then
@@ -182,9 +185,6 @@ fi;
 if command -v ctags > /dev/null; then
 	alias ctags='ctags --exclude={docs,cache,tiny_mce,layout} --recurse';
 fi;
-
-# OS X has no "md5sum", so use "md5" as a fall-back.
-command -v md5sum > /dev/null || alias md5sum='md5';
 
 # Make the "sudo" prompt more useful, without requiring access to "visudo".
 export SUDO_PROMPT='[sudo] password for %u on %h: ';
