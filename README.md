@@ -1,14 +1,24 @@
-Tilde: ~ is where the ♥ is
+# Tilde: ~ is where the ♥ is
 
 Various configuration files ("dotfiles") and scripts from my home directory. I
 use this on new computers so I feel more at home.
 
+## Quickstart
+
 To install, execute:
-    `git clone https://github.com/janmoesen/tilde.git && tilde/install.sh`
+```Shell
+git clone https://github.com/thedahm/tilde.git && tilde/install.sh`
+```
 
 To update an existing install, go to Tilde's directory and execute:
-    `git pull && ./install.sh`
+```Shell
+git pull && ./install.sh`
+```
 
-Jan Moesen
+## Thanks
+
+Forked from [Jan Moeseni's](http://github.com/janmoesen)' [tilde](http://github.com/janmoesen/tilde).
+
+## License
 
 See COPYING for licence details.
