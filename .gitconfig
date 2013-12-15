@@ -62,7 +62,7 @@
 
 	# Show a concise status of the working directory, along with the branch
 	# and the number of commits behind and/or ahead.
-	s = status --short --branch
+	s = status # --short --branch
 
 	# Quickly push to the most common destination.
 	pom = push origin master
