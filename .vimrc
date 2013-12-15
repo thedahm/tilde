@@ -1,10 +1,12 @@
 syntax on
+set hidden " allows opening files with unwritten changes to current buffer
 set ffs=unix
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,gbk,big5,latin1
+set termencoding=utf-8,gbk
 set nobackup
 set nowb
 set noswapfile
-set fileencodings=ucs-bom,utf-8,gbk,big5,latin1
-set termencoding=utf-8,gbk
 set autoread " set auto read when a file is chnaged from the outside
 set expandtab " insert space characters whenever the tab key is presse
 set nowrap
