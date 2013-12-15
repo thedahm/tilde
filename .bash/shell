@@ -3,6 +3,10 @@
 # Shell options, environment variables and readline settings
 # =============================================================================
 
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
 # Globbing and completion
 # -----------------------------------------------------------------------------
 # Case-insensitive globbing.
@@ -73,8 +77,9 @@ export HISTSIZE=4096;
 # previous commands without needlessly cluttering the current shell's history.
 export HISTFILESIZE=16384;
 
-# When executing the same command twice or more in a row, only store it once.
-export HISTCONTROL=ignoredups;
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
 # Keep track of the time the commands were executed.
 # The xterm colour escapes require special care when piping; e.g. "| less -R".
