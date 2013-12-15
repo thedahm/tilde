@@ -1,0 +1,3 @@
+#!/bin/bash
+#ldapsearch -H 'ldaps://ldap-dsee.umn.edu:636' -b "o=University of Minnesota,c=US" "(uid=$1)" -x
+ldapsearch -H 'ldaps://ldapauth.umn.edu:636' -b "o=University of Minnesota,c=US" "(uid=$1)" -x
