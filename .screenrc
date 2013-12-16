@@ -1,6 +1,6 @@
 # Use Ctrl+J instead of Ctrl+A, which goes to the start of a line in Bash and
 # other applications that use the Readline library.
-escape ^Jj
+#escape ^Jj
 
 term xterm
 termcap xterm* xn:hs@
