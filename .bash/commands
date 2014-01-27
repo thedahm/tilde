@@ -47,6 +47,8 @@ fi
 # -----------------------------------------------------------------------------
 # List the directories we want to add to the PATH variable, if they exist.
 paths_to_add=(
+    # Swadm php bin
+    /swadm/utils/php-5.4.13_build/bin/
 	# Private "bin"
 	"$HOME/bin"
 	# Homebrew, Rudix (and various other distributions and local installations)
