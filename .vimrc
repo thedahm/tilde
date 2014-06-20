@@ -1,3 +1,4 @@
+execute pathogen#infect()
 syntax on
 set hidden " allows opening files with unwritten changes to current buffer
 set ffs=unix
