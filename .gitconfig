@@ -2,6 +2,8 @@
 	editor = /usr/bin/vim
 	pager = less -x4
 	excludesfile = ~/.gitignore
+	whitespace = space-before-tab,trailing-space,cr-at-eol
+	ignorecase = false
 
 [user]
 	name = Dominic Hanzely
@@ -37,7 +39,7 @@
 	# the tracked branch (regardless of its remote name) as opposed to pushing
 	# all branches with a matching name on the remote. See "An asymmetry
 	# between git pull and push": http://longair.net/blog/?p=572
-	default = tracking
+	default = simple
 
 [branch]
 	autosetuprebase = always
@@ -96,3 +98,9 @@
 
     incoming = log ..@{u}
     outgoing = log @{u}..
+[diff]
+	renames = copy
+[pack]
+	threads = 0
+[credential]
+	helper = osxkeychain
