@@ -92,10 +92,10 @@ function git_prompt_config()
     GIT_PROMPT_COMMAND_OK="${Green}✔ "
     GIT_PROMPT_COMMAND_FAIL="${Red}✘ "
 
-    GIT_PROMPT_START_USER="${Yellow}${PathShort}${ResetColor}"
+    GIT_PROMPT_START_USER=""
     GIT_PROMPT_START_ROOT="${Yellow}${PathShort}${ResetColor}"
-    GIT_PROMPT_END_USER=" \n${White}${Time12a}${ResetColor} $ "
-    GIT_PROMPT_END_ROOT=" \n${White}${Time12a}${ResetColor} # "
+    GIT_PROMPT_END_USER=" \n${Yellow}${PathShort}${ResetColor}${White}${Time12a}${ResetColor} $ "
+    GIT_PROMPT_END_ROOT=" \n${Yellow}${PathShort}${ResetColor}${White}${Time12a}${ResetColor} # "
 
     # Please do not add colors to these symbols
     GIT_PROMPT_SYMBOLS_AHEAD="↑·"
@@ -289,7 +289,7 @@ function updatePrompt() {
     STATUS="${STATUS}${ResetColor}${GIT_PROMPT_SUFFIX}"
 
 
-    PS1="${LAST_COMMAND_INDICATOR}${PROMPT_START}$($prompt_callback)${STATUS}${PROMPT_END}"
+    PS1="${PROMPT_START}${LAST_COMMAND_INDICATOR}$($prompt_callback)${STATUS}\n${PROMPT_END}"
     if [[ -n "${VIRTUAL_ENV}" ]]; then
       PS1="(${Blue}$(basename ${VIRTUAL_ENV})${ResetColor}) ${PS1}"
     fi

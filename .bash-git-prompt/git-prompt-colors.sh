@@ -16,12 +16,12 @@ GIT_PROMPT_UNTRACKED="${Cyan}…"       # the number of untracked files/dirs
 GIT_PROMPT_STASHED="${BoldBlue}⚑"     # the number of stashed files/dir
 GIT_PROMPT_CLEAN="${BoldGreen}✔"      # a colored flag indicating a "clean" repo
 
-GIT_PROMPT_COMMAND_OK="${Green}✔ "    # indicator if the last command returned with an exit code of 0
-GIT_PROMPT_COMMAND_FAIL="${Red}✘ "   # indicator if the last command returned with an exit code of other than 0
+GIT_PROMPT_COMMAND_OK="${Green}✔${ResetColor}"    # indicator if the last command returned with an exit code of 0
+GIT_PROMPT_COMMAND_FAIL="${Red}✘${ResetColor}"   # indicator if the last command returned with an exit code of other than 0
 
-GIT_PROMPT_START_USER="${Yellow}${PathShort}${ResetColor}"
+GIT_PROMPT_START_USER="\n"
 GIT_PROMPT_START_ROOT="${Yellow}${PathShort}${ResetColor}"
-GIT_PROMPT_END_USER=" \n${White}${Time12a}${ResetColor} $ "
+GIT_PROMPT_END_USER="${ResetColor}${Yellow}${PathShort}${ResetColor} $ " # ${White}${Time12a}${ResetColor}
 GIT_PROMPT_END_ROOT=" \n${White}${Time12a}${ResetColor} # "
 
 # Please do not add colors to these symbols
