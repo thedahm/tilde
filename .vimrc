@@ -1,3 +1,4 @@
+set nocompatible "must be first line
 execute pathogen#infect()
 syntax on
 set hidden " allows opening files with unwritten changes to current buffer
@@ -30,6 +31,8 @@ let g:mapleader = ","
 
 " fast saving
 nmap <leader>w :w!<cr>
+" display pod2txt
+nmap <leader>? :<C-U>!\/buzzfeed\/bin\/pod2text %\|less<CR>
 " toggle line numbers
 nmap <leader>n :set nu<cr>
 nmap <leader>N :set nu!<cr>
