@@ -36,6 +36,12 @@ nmap <leader>? :<C-U>!\/buzzfeed\/bin\/pod2text %\|less<CR>
 " toggle line numbers
 nmap <leader>n :set nu<cr>
 nmap <leader>N :set nu!<cr>
+
+" Tabs
+nmap <leader>t :tabe %<cr>
+nmap <leader>T :Te<cr>
+nmap <leader>c :tabclose<cr>
+
 vmap <leader>b :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 vmap <leader>g :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 vmap <leader>h :<C-U>!hg blame -fu <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
