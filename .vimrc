@@ -59,3 +59,5 @@ if has ('multi_byte') && v:version > 601
 		set ambiwidth=double
 	endif
 endif
+
+autocmd Filetype javascript setlocal ts=2 sts=0 sw=2 noexpandtab
