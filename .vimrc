@@ -12,7 +12,7 @@ set noswapfile
 set autoread " set auto read when a file is chnaged from the outside
 set expandtab " insert space characters whenever the tab key is presse
 set nowrap
-set tabstop=4 " insert 4 spaces characters when tab key is pressed
+set tabstop=2 " insert 2 spaces characters when tab key is pressed
 set shiftwidth=4 " insert 4 spaces when autoindent indents
 set autoindent " automatically indent files
 set smartindent " Do smart indentation depending on code syntax (e.g. change after { }, keywords etc)
@@ -31,6 +31,13 @@ let g:mapleader = ","
 
 " fast saving
 nmap <leader>w :w!<cr>
+
+" fast save and quit
+nmap <leader>W ZZ<cr>
+
+" fast no save and quit
+nmap <leader>q ZQ<cr>
+
 " display pod2txt
 nmap <leader>? :<C-U>!\/buzzfeed\/bin\/pod2text %\|less<CR>
 " toggle line numbers
@@ -61,3 +68,4 @@ if has ('multi_byte') && v:version > 601
 endif
 
 autocmd Filetype javascript setlocal ts=2 sts=0 sw=2 noexpandtab
+autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab
