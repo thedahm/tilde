@@ -68,3 +68,4 @@ if has ('multi_byte') && v:version > 601
 endif
 
 autocmd Filetype javascript setlocal ts=2 sts=0 sw=2 noexpandtab
+autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab
