@@ -7,8 +7,15 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'bling/vim-airline'
+
+Plugin 'tpope/vim-fugitive'
+
+Plugin 'klen/python-mode'
+
 call vundle#end()
 
+filetype on
 "execute pathogen#infect()
 syntax on
 "set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
