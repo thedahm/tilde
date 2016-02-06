@@ -1,4 +1,7 @@
 #!/bin/bash
+if [[ -z "$TERM" ]]; then
+  export TERM="xterm-256color"
+fi;
 
 # Shell options, environment variables and readline settings
 # =============================================================================

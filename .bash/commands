@@ -47,8 +47,9 @@ fi
 # -----------------------------------------------------------------------------
 # List the directories we want to add to the PATH variable, if they exist.
 paths_to_add=(
-    # Swadm php bin
-    /swadm/utils/php-5.4.13_build/bin/
+  # Buzzfeed
+  /buzzfeed/bin
+  /buzzfeed/local/bin
 	# Private "bin"
 	"$HOME/bin"
 	# Homebrew, Rudix (and various other distributions and local installations)
@@ -58,6 +59,7 @@ paths_to_add=(
 	# System
 	/{,s}bin
 	/usr/{,s}bin
+  /usr/local/{,s}bin
 	# X binaries
 	/usr/X11/bin
 );
