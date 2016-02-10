@@ -95,7 +95,12 @@ unset {old,new}_path{,s} path{s,}_to_add;
 # -----------------------------------------------------------------------------
 alias nano='nano -w';
 alias pico='nano';
-alias vi='vim';
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+  alias vi='mvim -v';
+  alias vim='mvim -v';
+else
+  alias vi='vi';
+fi;
 export EDITOR='vim';
 
 # Make sure "view" as-is works when stdin is not a terminal and prevent the
