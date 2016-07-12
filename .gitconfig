@@ -1,5 +1,5 @@
 [core]
-	editor = /usr/bin/vim
+	editor = mvim -v
 	pager = less -x4
 	excludesfile = ~/.gitignore
 	whitespace = space-before-tab,trailing-space,cr-at-eol
