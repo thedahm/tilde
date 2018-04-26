@@ -88,6 +88,12 @@ HISTCONTROL=ignoreboth
 # The xterm colour escapes require special care when piping; e.g. "| less -R".
 export HISTTIMEFORMAT="${FG_BLUE}${FONT_BOLD}%Y/%m/%d %H:%M:%S${FONT_RESET}  ";
 
+# openssl lib/compiler paths
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+# For pkg-config to find this software you may need to set:
+#export PKG_CONFIG_PATH:"/usr/local/opt/openssl/lib/pkgconfig"
+            
 # Git Shell Completion
 # -----------------------------------------------------------------------------
 if [ -f ~/.git-completion.bash ]; then

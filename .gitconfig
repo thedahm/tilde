@@ -1,7 +1,7 @@
 [core]
-	editor = mvim -v
+	editor = vim -v
 	pager = less -x4
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/dominichanzely/.gitignore
 	whitespace = space-before-tab,trailing-space,cr-at-eol
 	ignorecase = false
 

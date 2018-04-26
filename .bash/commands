@@ -53,6 +53,7 @@ paths_to_add=(
 	# Private "bin"
 	"$HOME/bin"
 	# Homebrew, Rudix (and various other distributions and local installations)
+  /usr/local/opt/python/libexec/bin
 	/usr/local/{,s}bin
 	# MacPorts
 	/opt/local/{,s}bin
@@ -95,12 +96,13 @@ unset {old,new}_path{,s} path{s,}_to_add;
 # -----------------------------------------------------------------------------
 alias nano='nano -w';
 alias pico='nano';
-if [[ "$OSTYPE" =~ ^darwin ]]; then
-  alias vi='mvim -v';
-  alias vim='mvim -v';
-else
-  alias vi='vi';
-fi;
+alias vi='vim'
+# if [[ "$OSTYPE" =~ ^darwin ]]; then
+#   alias vi='mvim -v';
+#   alias vim='mvim -v';
+# else
+#   alias vi='vi';
+# fi;
 export EDITOR='vim';
 
 # Make sure "view" as-is works when stdin is not a terminal and prevent the
