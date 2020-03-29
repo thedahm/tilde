@@ -1,20 +1,20 @@
 set nocompatible "Strictly Vimproved
-filetype off "required by Vundle
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
+"filetype off "required by Vundle
+"
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+"
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'ervandew/supertab'
+"Plugin 'VundleVim/Vundle.vim'
+"Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'davidhalter/jedi-vim'
+"Plugin 'ervandew/supertab'
 "Plugin 'klen/python-mode'
-
-call vundle#end()
+"
+"call vundle#end()
 
 filetype on
 syntax on
@@ -24,7 +24,7 @@ set hidden
 set ffs=unix
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,gbk,big5,latin1
-set termencoding=utf-8,gbk
+set termencoding=utf-8
 set nobackup
 set nowb
 set noswapfile
