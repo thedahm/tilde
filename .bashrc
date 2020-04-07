@@ -31,4 +31,4 @@
 #     ssh localhost 'echo "PS1: >$PS1<"'
 #
 
-[ -n "$PS1" ] && source ~/.bash_profile;
+[ -n "$PS1" ] && source $HOME/.bash_profile;
