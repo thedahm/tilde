@@ -10,6 +10,10 @@
 alias sudo='sudo ';
 alias sc='shellcheck -e SC1090 -Calways'
 
+# Rig aliases
+alias dev='${HOME}/local/src/mono/dev/src/bash/main'
+alias rig='${HOME}/local/src/mono/dev/src/bash/main rig'
+
 # enable color support of ls and also add handy aliases
 #if [ -x /usr/bin/dircolors ]; then
 #    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
